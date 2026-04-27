@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulation Title – Physims</title>
+  <meta name="description" content="Interactive simulation – Physims AQA A Level Physics." />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--
+    Adjust the path to style.css depending on where this file lives.
+    For a file in /topics/yearXX/ use: ../../css/style.css
+    For a file in the root use: css/style.css
+  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <i class="fa-solid fa-atom fa-fw" style="color:var(--physims-teal);margin-right:.45rem;"></i>
+          Phy<span class="brand-accent">sims</span>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            <i class="fa-solid fa-house fa-fw" style="margin-right:.35rem;"></i>Home
+          </a>
+          <!-- Add Year 12 / Year 13 dropdowns here as needed -->
+          <a class="navbar-item" href="about.html">
+            <i class="fa-solid fa-circle-info fa-fw" style="margin-right:.35rem;"></i>About
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb-bar">
+    <a href="index.html">Home</a>
+    <span class="sep">/</span>
+    <a href="topic-page.html">Topic Name</a>
+    <span class="sep">/</span>
+    <strong>Simulation Title</strong>
+  </div>
+
+  <!-- ===== SIM HEADER ===== -->
+  <section class="topic-hero" style="padding:1.5rem;">
+    <div class="container">
+      <h1 class="title is-4" style="margin-bottom:.2rem;">
+        <i class="fa-solid fa-circle-play teal" style="margin-right:.4rem;"></i>
+        Simulation Title
+      </h1>
+      <p class="subtitle is-6" style="margin-bottom:0;">
+        Short description of what this simulation demonstrates.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <!-- Simulation layout: canvas left, controls right -->
+    <div class="sim-layout">
+
+      <!-- Canvas / simulation area -->
+      <div class="sim-canvas-wrapper" id="simWrapper">
+        <!--
+          Replace the placeholder overlay with your canvas element once
+          the simulation JS file is ready.
+
+          Example:
+            <canvas id="simCanvas" width="800" height="500"></canvas>
+
+          Then load the simulation script at the bottom of <body>:
+            <script src="../../simulations/your-sim.js"></script>
+        -->
+        <div class="sim-placeholder-overlay">
+          <span class="icon"><i class="fa-solid fa-flask-vial"></i></span>
+          <strong style="color:#4a7fa5; font-size:1.1rem;">Simulation Coming Soon</strong>
+          <p>
+            This simulation is under development.
+            Drop a self-contained JS file into <code>/simulations/</code>
+            and replace this placeholder with a <code>&lt;canvas&gt;</code> element.
+          </p>
+        </div>
+      </div>
+
+      <!-- Controls panel -->
+      <div class="sim-controls">
+        <h3><i class="fa-solid fa-sliders teal" style="margin-right:.35rem;"></i>Controls</h3>
+
+        <!-- Example slider control – duplicate and adapt as needed -->
+        <div class="control-group">
+          <label for="param1">Parameter 1 <span style="color:var(--physims-teal);">(unit)</span></label>
+          <input type="range" id="param1" min="0" max="100" value="50"
+                 oninput="document.getElementById('param1Val').textContent = this.value" />
+          <div class="value-display"><span id="param1Val">50</span> unit</div>
+        </div>
+
+        <div class="control-group">
+          <label for="param2">Parameter 2 <span style="color:var(--physims-teal);">(unit)</span></label>
+          <input type="range" id="param2" min="0" max="100" value="25"
+                 oninput="document.getElementById('param2Val').textContent = this.value" />
+          <div class="value-display"><span id="param2Val">25</span> unit</div>
+        </div>
+
+        <!-- Play / Pause / Reset buttons -->
+        <div class="sim-btn">
+          <button class="btn-play"  id="btnPlay"  onclick="simPlay()">
+            <i class="fa-solid fa-play"></i> Play
+          </button>
+          <button class="btn-pause" id="btnPause" onclick="simPause()">
+            <i class="fa-solid fa-pause"></i> Pause
+          </button>
+          <button class="btn-reset" id="btnReset" onclick="simReset()">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
+
+        <!-- Live readouts -->
+        <h3><i class="fa-solid fa-gauge teal" style="margin-right:.35rem;"></i>Readouts</h3>
+        <div class="sim-readouts">
+          <div class="readout-row">
+            <span class="label">Quantity 1</span>
+            <span class="value" id="readout1">—</span>
+          </div>
+          <div class="readout-row">
+            <span class="label">Quantity 2</span>
+            <span class="value" id="readout2">—</span>
+          </div>
+          <div class="readout-row">
+            <span class="label">Time</span>
+            <span class="value" id="readoutTime">0.00 s</span>
+          </div>
+        </div>
+
+        <!-- Physics note -->
+        <div class="info-box" style="font-size:.8rem;">
+          <strong>Key equation:</strong><br />
+          Replace this with the relevant formula and a one-line explanation.
+        </div>
+      </div><!-- /sim-controls -->
+
+    </div><!-- /sim-layout -->
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      <strong style="color:#a9cce3;">Physims</strong> &mdash;
+      AQA A Level Physics Simulations &middot;
+      <a href="about.html">About</a> &middot;
+      <a href="https://github.com/millerrd/physims" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </p>
+  </footer>
+
+  <!-- Navbar burger JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.navbar-burger').forEach(burger => {
+        burger.addEventListener('click', () => {
+          const target = document.getElementById(burger.dataset.target);
+          burger.classList.toggle('is-active');
+          target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+
+  <!--
+    Simulation control stubs – replace with your simulation's actual logic.
+    These functions are called by the Play / Pause / Reset buttons above.
+  -->
+  <script>
+    function simPlay()  { console.log('sim play');  }
+    function simPause() { console.log('sim pause'); }
+    function simReset() { console.log('sim reset'); }
+  </script>
+
+  <!--
+    Load your simulation script here, e.g.:
+    <script src="../../simulations/your-simulation.js"></script>
+  -->
+</body>
+</html>

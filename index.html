@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physims – AQA A Level Physics Simulations</title>
+  <meta name="description" content="Interactive AQA A Level Physics simulations for sixth-form classroom use." />
+
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <i class="fa-solid fa-atom fa-fw" style="color:var(--physims-teal);margin-right:.45rem;"></i>
+          Phy<span class="brand-accent">sims</span>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item is-active" href="index.html">
+            <i class="fa-solid fa-house fa-fw" style="margin-right:.35rem;"></i>Home
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              <i class="fa-solid fa-1 fa-fw" style="margin-right:.35rem;"></i>Year 12
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="topics/year12/measurements.html">Measurements &amp; Errors</a>
+              <a class="navbar-item" href="topics/year12/mechanics.html">Mechanics</a>
+              <a class="navbar-item" href="topics/year12/materials.html">Materials</a>
+              <a class="navbar-item" href="topics/year12/waves.html">Waves</a>
+              <a class="navbar-item" href="topics/year12/electricity.html">Electricity</a>
+              <a class="navbar-item" href="topics/year12/particles.html">Particles</a>
+              <a class="navbar-item" href="topics/year12/quantum.html">Quantum</a>
+            </div>
+          </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              <i class="fa-solid fa-2 fa-fw" style="margin-right:.35rem;"></i>Year 13
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="topics/year13/periodic-motion.html">Periodic Motion</a>
+              <a class="navbar-item" href="topics/year13/gravitational-fields.html">Gravitational Fields</a>
+              <a class="navbar-item" href="topics/year13/electric-fields.html">Electric Fields</a>
+              <a class="navbar-item" href="topics/year13/electromagnetism.html">Electromagnetism</a>
+              <a class="navbar-item" href="topics/year13/nuclear.html">Nuclear Physics</a>
+              <a class="navbar-item" href="topics/year13/capacitance.html">Capacitance</a>
+              <a class="navbar-item" href="topics/year13/thermodynamics.html">Thermodynamics</a>
+            </div>
+          </div>
+
+          <a class="navbar-item" href="about.html">
+            <i class="fa-solid fa-circle-info fa-fw" style="margin-right:.35rem;"></i>About
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-physims">
+    <div class="container">
+      <h1 class="title">
+        <i class="fa-solid fa-atom" style="margin-right:.5rem;"></i>Physims
+      </h1>
+      <p class="subtitle">Interactive AQA A Level Physics Simulations</p>
+      <div class="hero-tagline">
+        <span class="tag"><i class="fa-solid fa-graduation-cap" style="margin-right:.3rem;"></i>Sixth Form</span>
+        <span class="tag"><i class="fa-solid fa-chalkboard-user" style="margin-right:.3rem;"></i>Classroom Ready</span>
+        <span class="tag"><i class="fa-solid fa-book-open" style="margin-right:.3rem;"></i>AQA Aligned</span>
+        <span class="tag"><i class="fa-solid fa-laptop-code" style="margin-right:.3rem;"></i>No Install Needed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <!-- Year 12 -->
+    <div class="container year-section" id="year12">
+      <div class="year-section-title y12">
+        <i class="fa-solid fa-1"></i> Year 12 Topics
+      </div>
+      <div class="columns is-multiline">
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year12/measurements.html">
+            <div class="topic-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+            <div class="topic-name">Measurements &amp; Errors</div>
+            <div class="topic-count">AQA Chapter 1</div>
+            <span class="topic-badge">Uncertainty · Sig Figs</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year12/mechanics.html">
+            <div class="topic-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <div class="topic-name">Mechanics</div>
+            <div class="topic-count">AQA Chapters 2–5</div>
+            <span class="topic-badge">Kinematics · Forces · Momentum</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year12/materials.html">
+            <div class="topic-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="topic-name">Materials</div>
+            <div class="topic-count">AQA Chapter 6</div>
+            <span class="topic-badge">Stress · Strain · Young's Modulus</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year12/waves.html">
+            <div class="topic-icon"><i class="fa-solid fa-wave-square"></i></div>
+            <div class="topic-name">Waves</div>
+            <div class="topic-count">AQA Chapters 7–9</div>
+            <span class="topic-badge">Interference · Diffraction</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year12/electricity.html">
+            <div class="topic-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="topic-name">Electricity</div>
+            <div class="topic-count">AQA Chapters 10–11</div>
+            <span class="topic-badge">Circuits · EMF · Resistance</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year12/particles.html">
+            <div class="topic-icon"><i class="fa-solid fa-circle-dot"></i></div>
+            <div class="topic-name">Particles</div>
+            <div class="topic-count">AQA Chapter 12</div>
+            <span class="topic-badge">Hadrons · Leptons · Quarks</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year12/quantum.html">
+            <div class="topic-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="topic-name">Quantum</div>
+            <div class="topic-count">AQA Chapter 13</div>
+            <span class="topic-badge">Photoelectric Effect · Wave-Particle</span>
+          </a>
+        </div>
+
+      </div><!-- /columns -->
+    </div><!-- /year-section -->
+
+    <!-- Year 13 -->
+    <div class="container year-section" id="year13">
+      <div class="year-section-title y13">
+        <i class="fa-solid fa-2"></i> Year 13 Topics
+      </div>
+      <div class="columns is-multiline">
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year13/periodic-motion.html">
+            <div class="topic-icon"><i class="fa-solid fa-rotate"></i></div>
+            <div class="topic-name">Periodic Motion</div>
+            <div class="topic-count">AQA Chapter 14</div>
+            <span class="topic-badge">SHM · Pendulums · Springs</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year13/gravitational-fields.html">
+            <div class="topic-icon"><i class="fa-solid fa-earth-americas"></i></div>
+            <div class="topic-name">Gravitational Fields</div>
+            <div class="topic-count">AQA Chapter 15</div>
+            <span class="topic-badge">Newton's Law · Orbits</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year13/electric-fields.html">
+            <div class="topic-icon"><i class="fa-solid fa-charging-station"></i></div>
+            <div class="topic-name">Electric Fields</div>
+            <div class="topic-count">AQA Chapter 16</div>
+            <span class="topic-badge">Coulomb's Law · Field Lines</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year13/electromagnetism.html">
+            <div class="topic-icon"><i class="fa-solid fa-magnet"></i></div>
+            <div class="topic-name">Electromagnetism</div>
+            <div class="topic-count">AQA Chapters 17–18</div>
+            <span class="topic-badge">Motors · Induction · AC</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year13/nuclear.html">
+            <div class="topic-icon"><i class="fa-solid fa-radiation"></i></div>
+            <div class="topic-name">Nuclear Physics</div>
+            <div class="topic-count">AQA Chapter 19</div>
+            <span class="topic-badge">Radioactive Decay · Fission</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year13/capacitance.html">
+            <div class="topic-icon"><i class="fa-solid fa-battery-half"></i></div>
+            <div class="topic-name">Capacitance</div>
+            <div class="topic-count">AQA Chapter 20</div>
+            <span class="topic-badge">Charge · Discharge · Energy</span>
+          </a>
+        </div>
+
+        <div class="column is-one-third-tablet is-one-quarter-desktop">
+          <a class="topic-card" href="topics/year13/thermodynamics.html">
+            <div class="topic-icon"><i class="fa-solid fa-temperature-high"></i></div>
+            <div class="topic-name">Thermodynamics</div>
+            <div class="topic-count">AQA Chapter 21</div>
+            <span class="topic-badge">Ideal Gas · Thermal Energy</span>
+          </a>
+        </div>
+
+      </div><!-- /columns -->
+    </div><!-- /year-section -->
+
+    <!-- Call to action -->
+    <div class="container" style="padding: 1rem 1.5rem 3rem;">
+      <div class="info-box">
+        <strong><i class="fa-solid fa-lightbulb teal" style="margin-right:.4rem;"></i>How to use Physims:</strong>
+        Choose a topic above to see available simulations. Each simulation includes
+        interactive controls so students can explore physics concepts by changing
+        variables and observing the effects in real time.
+        Teachers can project simulations full-screen for whole-class demonstrations.
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      <strong style="color:#a9cce3;">Physims</strong> &mdash;
+      AQA A Level Physics Simulations &middot;
+      Built for sixth-form teachers &middot;
+      <a href="about.html">About</a> &middot;
+      <a href="https://github.com/millerrd/physims" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </p>
+  </footer>
+
+  <!-- Navbar burger JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgers = document.querySelectorAll('.navbar-burger');
+      burgers.forEach(burger => {
+        burger.addEventListener('click', () => {
+          const target = document.getElementById(burger.dataset.target);
+          burger.classList.toggle('is-active');
+          target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
