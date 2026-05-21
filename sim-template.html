@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simulation Title – Physims</title>
-  <meta name="description" content="Interactive simulation – Physims AQA A Level Physics." />
+  <meta name="description" content="Interactive simulation – Physims A Level Physics." />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -35,10 +35,26 @@
           <a class="navbar-item" href="index.html">
             <i class="fa-solid fa-house fa-fw" style="margin-right:.35rem;"></i>Home
           </a>
-          <!-- Add Year 12 / Year 13 dropdowns here as needed -->
-          <a class="navbar-item" href="about.html">
-            <i class="fa-solid fa-circle-info fa-fw" style="margin-right:.35rem;"></i>About
-          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Topics</a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="topics/year12/measurements.html">Measurements &amp; Errors</a>
+              <a class="navbar-item" href="topics/year12/mechanics.html">Mechanics</a>
+              <a class="navbar-item" href="topics/year12/materials.html">Materials</a>
+              <a class="navbar-item" href="topics/year12/waves.html">Waves</a>
+              <a class="navbar-item" href="topics/year12/electricity.html">Electricity</a>
+              <a class="navbar-item" href="topics/year12/particles.html">Particles</a>
+              <a class="navbar-item" href="topics/year12/quantum.html">Quantum</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="topics/year13/periodic-motion.html">Periodic Motion</a>
+              <a class="navbar-item" href="topics/year13/gravitational-fields.html">Gravitational Fields</a>
+              <a class="navbar-item" href="topics/year13/electric-fields.html">Electric Fields</a>
+              <a class="navbar-item" href="topics/year13/electromagnetism.html">Electromagnetism</a>
+              <a class="navbar-item" href="topics/year13/nuclear.html">Nuclear Physics</a>
+              <a class="navbar-item" href="topics/year13/capacitance.html">Capacitance</a>
+              <a class="navbar-item" href="topics/year13/thermodynamics.html">Thermodynamics</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -157,8 +173,7 @@
   <footer>
     <p>
       <strong style="color:#a9cce3;">Physims</strong> &mdash;
-      AQA A Level Physics Simulations &middot;
-      <a href="about.html">About</a> &middot;
+      Simulations built by the physics department at King's &middot;
       <a href="https://github.com/millerrd/physims" target="_blank" rel="noopener">
         <i class="fa-brands fa-github"></i> GitHub
       </a>
