@@ -3,6 +3,8 @@
    Built on top of Bulma CSS
    ============================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 /* ---- Colour tokens ---- */
 :root {
   --physims-navy:   #0d1b2a;
@@ -22,7 +24,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
   background-color: var(--physims-light);
   color: var(--physims-text);
   min-height: 100vh;
@@ -44,6 +46,7 @@ main { flex: 1; }
   font-weight: 700;
   letter-spacing: .5px;
   color: var(--physims-white) !important;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .navbar-brand .brand-accent {
@@ -92,36 +95,38 @@ main { flex: 1; }
   background: linear-gradient(135deg, var(--physims-navy) 0%, var(--physims-blue) 60%, #117a65 100%);
   padding: 3.5rem 1.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-physims > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-physims::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26,188,156,.18) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  pointer-events: none;
 }
 
 .hero-physims .title {
   color: var(--physims-white);
   font-size: 2.6rem;
-  font-weight: 800;
-  text-shadow: 0 2px 6px rgba(0,0,0,.3);
+  font-weight: 700;
+  letter-spacing: -.5px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .hero-physims .subtitle {
   color: #a9cce3;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   margin-top: .4rem;
-}
-
-.hero-physims .hero-tagline {
-  margin-top: 1.2rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.hero-tagline .tag {
-  font-size: .85rem;
-  padding: .4em 1em;
-  background-color: rgba(26,188,156,.2);
-  color: var(--physims-teal);
-  border: 1px solid var(--physims-teal);
-  border-radius: 2em;
+  font-weight: 400;
+  letter-spacing: .01em;
 }
 
 /* ---- Section headings ---- */
@@ -129,16 +134,22 @@ main { flex: 1; }
   padding: 2.5rem 1.5rem 1rem;
 }
 
+.topics-section {
+  padding: 2rem 1.5rem 1rem;
+}
+
 .year-section-title {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--physims-white);
-  padding: .55rem 1.2rem;
+  padding: .45rem 1rem;
   border-radius: 6px;
   display: inline-flex;
   align-items: center;
   gap: .5rem;
   margin-bottom: 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: .01em;
 }
 
 .year-section-title.y12 { background-color: var(--physims-year12); }
@@ -177,11 +188,7 @@ main { flex: 1; }
   font-weight: 700;
   color: var(--physims-blue);
   margin-bottom: .3rem;
-}
-
-.topic-card .topic-count {
-  font-size: .8rem;
-  color: var(--physims-muted);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .topic-card .topic-badge {
@@ -199,6 +206,22 @@ main { flex: 1; }
   background: linear-gradient(135deg, var(--physims-navy) 0%, var(--physims-blue) 100%);
   padding: 2.5rem 1.5rem;
   color: var(--physims-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26,188,156,.12) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.topic-hero > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .topic-hero .topic-icon-lg {
@@ -207,7 +230,11 @@ main { flex: 1; }
   margin-bottom: .6rem;
 }
 
-.topic-hero .title { color: var(--physims-white); }
+.topic-hero .title {
+  color: var(--physims-white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
 .topic-hero .subtitle { color: #a9cce3; }
 
 /* ---- Simulation cards (topic pages) ---- */
@@ -394,9 +421,25 @@ main { flex: 1; }
   padding: 3rem 1.5rem;
   text-align: center;
   color: var(--physims-white);
+  position: relative;
+  overflow: hidden;
 }
 
-.about-hero .title { color: var(--physims-white); }
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26,188,156,.12) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.about-hero > .container { position: relative; z-index: 1; }
+
+.about-hero .title {
+  color: var(--physims-white);
+  font-family: 'Space Grotesk', sans-serif;
+}
 .about-hero .subtitle { color: #a9cce3; }
 
 .about-card {
